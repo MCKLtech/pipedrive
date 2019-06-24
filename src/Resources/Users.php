@@ -70,4 +70,14 @@ class Users extends Resource
     {
         return $this->request->post(':id/blacklistedEmails', compact('id', 'address'));
     }
+    
+    /**
+     * Get the current User Information
+     *
+     * @return Response
+     */
+    public function getMe()
+    {
+        return $this->request->get('me'); 
+    }
 }
